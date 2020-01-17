@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:log4jdbc:mariadb://localhost:3006/mall?nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+
+mybatis-plus:
+  typeAliasesPackage: com.lsy.mybatisplus.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    #  MyBatis 在使用 resultMap 来映射查询结果中的列，
+    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段，
+    # 这就导致在调用到该字段的时候由于没有映射，取不到而报空指针异常。
+    call-setters-on-nulls: true
+  global-config:
+    db-config:
+      # 逻辑已删除值(默认为 1)
+      logic-delete-value: 1
+      # 全局逻辑删除字段值
+      logic-delete-field: deleted
+      # 逻辑未删除值(默认为 0)
+      logic-not-delete-value: 0
