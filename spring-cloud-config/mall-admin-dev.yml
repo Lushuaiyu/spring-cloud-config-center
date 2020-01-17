@@ -1,6 +1,15 @@
 server:
   port: 8081
 
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
