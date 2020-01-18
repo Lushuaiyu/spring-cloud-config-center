@@ -5,7 +5,8 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:log4jdbc:mariadb://localhost:3006/mall?nullCatalogMeansCurrent=true
+        url: jdbc:mysql://localhost:3036/mall?nullCatalogMeansCurrent=true
+
     username: root
     password: 123456
 
