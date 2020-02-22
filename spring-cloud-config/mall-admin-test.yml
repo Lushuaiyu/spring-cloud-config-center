@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3036/mall?nullCatalogMeansCurrent=true
+    url: jdbc:mysql://localhost:3306/mall?nullCatalogMeansCurrent=true
     username: root
-    password: 123456
+    password: qwert12345
 
 mybatis-plus:
   typeAliasesPackage: com.lsy.mybatisplus.entity
